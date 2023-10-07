@@ -1,4 +1,4 @@
-// const User = require("../model/User.js")
+
 // const bcrypt = require("bcryptjs");
 const mysql = require('mysql2');
 const db = require('../config/db.js');
