@@ -3,7 +3,7 @@ const express = require('express');
 // const mysql = require('mysql2');
 // const db = require('./config/db.js')
 // const blogRouter = require("./routes/blog-routes.js");
-// const userRouter = require("./routes/user-routes.js");
+const userRouter = require("./routes/user-routes.js");
 
 // dotenv.config({path: './.env'});
 const app = express();
