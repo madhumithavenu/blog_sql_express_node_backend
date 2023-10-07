@@ -35,6 +35,7 @@ module.exports.addBlog = async (req, res, next) => {
     })
 };
 
+
 module.exports.updateBlog = async (req, res, next) => {
     const { title, description,image,id} = req.body;
     const blogId = req.params.id;
@@ -53,6 +54,7 @@ module.exports.updateBlog = async (req, res, next) => {
     })
 };
 
+
 module.exports.getById = async (req, res, next) => {
     const blogId = req.params.id;
     db.query('SELECT * FROM BLOGS WHERE B_ID=?',[blogId],(err, results)=>{
@@ -68,15 +70,15 @@ module.exports.getById = async (req, res, next) => {
 };
 
 
-module.exports.deleteBlog = async (req, res, next) => {
+module.exports.deleteBlog = async (req, res, obj,next) => {
     const blogId = req.params.id;
     db.query('DELETE FROM BLOGS WHERE B_ID=?',[blogId],(err, results)=>{
         if (err) {
-            console.log(err);
             return res.json({
                 message: 'unable to delete the Blog'
-            })
-        } else {
+            }) 
+        }
+        else {
             return res.json({
                 message: 'Deleted Successfully'
             })

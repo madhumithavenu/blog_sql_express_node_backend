@@ -28,10 +28,6 @@ module.exports.signup = (req, res) => {
             })
         }
 
-        // let hashedPassword = await bcrypt.hash(password, 8);
-        // console.log(hashedPassword);
-
-        // res.send("testing");
         db.query('INSERT INTO USERS SET ?', { name: name, email: email, password: password }, (err, results) => {
             if (err) {
                 console.log(err);
