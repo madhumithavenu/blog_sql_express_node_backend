@@ -43,7 +43,6 @@ module.exports.signup = (req, res) => {
             }
         })
     });
-
 }
 
 module.exports.login = async (req, res, next) => {
