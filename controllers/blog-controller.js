@@ -95,7 +95,6 @@ module.exports.deleteBlog = async (req, res, next) => {
                 message: 'Could not find the blog'
             });
 
-
             return res.json({
                 message: 'Blog deleted'
             });
