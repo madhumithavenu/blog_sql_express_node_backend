@@ -12,7 +12,6 @@ module.exports.getAllUser = async (req, res, next) => {
 })
 };
 
-
 module.exports.signup = (req, res) => {
     const { name, email, password} = req.body;
     db.query('SELECT EMAIL FROM USERS WHERE EMAIL = ?',[email], (err, results) => {
