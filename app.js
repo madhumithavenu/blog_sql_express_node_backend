@@ -9,7 +9,7 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
-// app.use("/api/user", userRouter);
+app.use("/api/user", userRouter);
 // app.use("/api/blog",blogRouter);
 
 const PORT = process.env.PORT || 4000;
