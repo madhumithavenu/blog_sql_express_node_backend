@@ -53,7 +53,6 @@ module.exports.updateBlog = async (req, res, next) => {
     })
 };
 
-
 module.exports.getById = async (req, res, next) => {
     const blogId = req.params.id;
     db.query('SELECT * FROM BLOGS WHERE B_ID=?',[blogId],(err, results)=>{
