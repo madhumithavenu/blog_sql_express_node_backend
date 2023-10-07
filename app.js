@@ -15,13 +15,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, ()=>console.log(`Sever Running on PORT ${PORT}`));
 
-// db.connect((err) => {
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         console.log("MySQL Connected");
-//     }
-// })
+
 
 // app.listen(4000, () => {
 //     console.log("Server Started on port 4000");
