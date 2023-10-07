@@ -1,6 +1,5 @@
 const express = require('express');
 const {getAllUser,signup,login} = require("../controllers/user-controller.js");
-
 const userRouter = express.Router();
 
 userRouter.get("/", getAllUser);
